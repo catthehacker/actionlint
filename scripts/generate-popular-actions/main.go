@@ -15,7 +15,7 @@ import (
 	"sort"
 	"strings"
 
-	"github.com/rhysd/actionlint"
+	"github.com/catthehacker/actionlint"
 	"gopkg.in/yaml.v3"
 )
 

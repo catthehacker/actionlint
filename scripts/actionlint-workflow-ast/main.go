@@ -6,8 +6,8 @@ import (
 	"io/ioutil"
 	"os"
 
+	"github.com/catthehacker/actionlint"
 	"github.com/kr/pretty"
-	"github.com/rhysd/actionlint"
 )
 
 func run(args []string, stdin io.Reader, stdout, stderr io.Writer) int {

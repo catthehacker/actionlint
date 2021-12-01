@@ -1,4 +1,4 @@
-module github.com/rhysd/actionlint
+module github.com/catthehacker/actionlint
 
 go 1.17
 

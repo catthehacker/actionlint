@@ -316,6 +316,8 @@ const (
 	ExecKindAction ExecKind = iota
 	// ExecKindRun is kind for step to run shell script
 	ExecKindRun
+	// ExecKindInvalid is kind for step that combines incompatible with each other keys
+	ExecKindInvalid ExecKind = 255
 )
 
 // Exec is an interface how the step is executed. Step in workflow runs either an action or a script
@@ -325,6 +327,17 @@ type Exec interface {
 	// SetWorkingDir sets working-directory section.
 	SetWorkingDir(d *String)
 }
+
+// ExecInvalid represents an invalid combination of keys in a step
+type ExecInvalid struct{}
+
+// Kind returns kind of the step execution
+func (e *ExecInvalid) Kind() ExecKind {
+	return ExecKindInvalid
+}
+
+// SetWorkingDir for compatibility
+func (e *ExecInvalid) SetWorkingDir(_ *String) {}
 
 // ExecRun is configuration how to run shell script at the step.
 // https://docs.github.com/en/actions/learn-github-actions/workflow-syntax-for-github-actions#jobsjob_idstepsrun

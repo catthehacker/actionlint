@@ -4,7 +4,7 @@ import (
 	"io/ioutil"
 	"syscall/js"
 
-	"github.com/rhysd/actionlint"
+	"github.com/catthehacker/actionlint"
 )
 
 var (

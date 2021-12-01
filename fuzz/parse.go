@@ -1,8 +1,10 @@
+//go:build gofuzz
 // +build gofuzz
+
 package actionlint_fuzz
 
 import (
-	"github.com/rhysd/actionlint"
+	"github.com/catthehacker/actionlint"
 	"gopkg.in/yaml.v3"
 )
 
